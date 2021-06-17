@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: santander-phpinfo-container
-      image: goripanick/santander-phpinfo
+      image: belcebus/santander-phpinfo
       command:
         - /usr/bin/php
       workingDir: /app/
