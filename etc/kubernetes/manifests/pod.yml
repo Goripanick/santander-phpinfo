@@ -1,16 +1,18 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  labels:
+    app: santander-phpinfo
   name: santander-phpinfo-po
 spec:
   containers:
     - name: santander-phpinfo-container
-      image: belcebus/santander-phpinfo
       command:
         - /usr/bin/php
+      image: belcebus/santander-phpinfo
       workingDir: /app/
       args:
-        - -f
+        - '-f'
         - index.php
-        - -S
-        - 0.0.0.0:8080
+        - '-S'
+        - '0.0.0.0:8080'
